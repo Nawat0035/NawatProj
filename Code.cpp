@@ -25,7 +25,8 @@ void generateBoard() {
 
 void printBoard() {
 
-    cout << "\n========== CANDY CRUSH TERMINAL ==========\n";
+    cout << "\n========== Puzzue Candy Crush ==========\n";
+    cout << "r = row horizontal c = column vertical\n";
     cout << "Score : " << score << endl;
 
     cout << "   ";
