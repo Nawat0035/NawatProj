@@ -6,9 +6,11 @@
 
 using namespace std;
 
+  // จำนวนแถวและคอลัม
+
 const int ROWS = 8;
 const int COLS = 8;
-const int TYPES = 5;
+const int TYPES = 7;
 
 vector<vector<char>> board(ROWS, vector<char>(COLS));
 int score = 0;
@@ -53,8 +55,7 @@ void explodeRow(int r){
     }
 }
 
-void explodeCross(int r,int c){
-
+void explodeCross(int r,int c){    
     for(int j=0;j<COLS;j++){
         if(board[r][j]!=' '){
             board[r][j]=' ';
@@ -74,7 +75,7 @@ bool findMatches(){
 
     bool found=false;
 
-    // horizontal
+    // ตรวจแนวนอน
     for(int i=0;i<ROWS;i++){
 
         int count=1;
@@ -138,7 +139,7 @@ bool findMatches(){
 
     }
 
-    // vertical
+    // ตรวจแนวตั้ง
 
     for(int j=0;j<COLS;j++){
 
@@ -295,7 +296,7 @@ int main(){
         cin >> r1 >> c1 >> r2 >> c2;
 
         if(!swapCandy(r1,c1,r2,c2))
-            cout << "Invalid move!\n";
+            cout << "Invalid move! You can only swap the top under left and right one.\n";
 
     }
 
